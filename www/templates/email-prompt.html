@@ -1,0 +1,32 @@
+<div class="modal">
+    <ion-header-bar>
+        <h1 class="title">E-mail verification</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="hideModal()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <p class='item item-text-wrap'> In order to proceed please enter your Customer Email address, once we validate it you'll be redirected to our site to finalize your order.</p>
+        <label class="item item-input">
+            <span class="input-label">Email</span>
+            <input type="email" ng-model="email.addr" ng-change="evaluateEmail()" placeholder="Enter your Customer Email">
+        </label>
+        <a class='item subdued text-center' ng-click='registerUser()'>Don't have an account yet?</a>
+
+        <label class="item">
+            <div class="row" ng-if="user">
+                <div class="col">
+                    <div class="item">
+                    <div ng-if="user.customer.last_name || user.customer.first_name"><strong>Name</strong>: {{user.customer.last_name}} {{user.customer.first_name}}</div>
+                    <div ng-if="user.customer.last_order_date"><strong>Last Order</strong>: {{user.customer.last_order_date | date}}</div>
+                    <div ng-if="user.customer.id || user.customer.created_at"><strong>Id / Created</strong>: {{user.customer.id}} / {{user.customer.created_at | date}}</div>
+                    <div ng-if="user.customer.username || user.customer.role"><strong>Username / Role</strong>: {{user.customer.username}} / {{user.customer.role}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="button button-block button-balanced" ng-click="order()" disabled ng-if='!emailVerified'>Continue</button>
+            <button class="button button-block button-balanced" ng-click="order()" ng-if='emailVerified'>Continue</button>
+        </label>
+    </ion-content>
+</div>
