@@ -4,7 +4,6 @@ angular.module('woocommerce-api', ['ionic', 'woocommerce-api.controllers',
     'woocommerce-api.data', 'woocommerce-api.filters', 'woocommerce-api.directives', 'easypiechart'])
 
 .run(function($rootScope, $ionicPlatform, $ionicLoading) {
-   alert("app");
     $ionicPlatform.ready(function() {
 
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
