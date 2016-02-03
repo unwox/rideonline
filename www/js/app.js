@@ -4,7 +4,8 @@ angular.module('woocommerce-api', ['ionic', 'woocommerce-api.controllers',
     'woocommerce-api.data', 'woocommerce-api.filters', 'woocommerce-api.directives', 'easypiechart'])
 
 .run(function($rootScope, $ionicPlatform, $ionicLoading) {
-    $ionicPlatform.ready(function() {
+    alert("2");
+	$ionicPlatform.ready(function() {
 
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -133,4 +134,5 @@ angular.module('woocommerce-api', ['ionic', 'woocommerce-api.controllers',
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/home');
+	alert("3");
 });
