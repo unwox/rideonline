@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.hybridapps.woocommerce" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Ionic WooCommerce API</name>
+  <name>Rideonline</name>
   <description>
-    Ionic WooCommerce API Application is an eCommerce Ionic Application compatible with WooCommerce.
+    Rideonline eCommerce.
   </description>
   <content src="index.html"/>
   <access origin="*"/>
