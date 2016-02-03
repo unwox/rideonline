@@ -12,7 +12,7 @@
 
                 <!-- Parent -->
                 <div class='item item-divider'>
-                    <a class="text-center category-title" href=" #/app/categories/{{category.name}}">
+                    <a class="text-center category-title" href=" #/app/categories/{{category.slug}}">
                         <div class='h3'>{{category.name}} - <b>{{category.count}}</b></div>
                     </a>
 
@@ -25,7 +25,7 @@
 
                     <ul class="list">
                         <li class="item" ng-repeat="c in category.children">
-                            <a class="text-wrap category-title" href="#/app/categories/{{c.name}}">
+                            <a class="text-wrap category-title" href="#/app/categories/{{c.slug}}">
                                 <div easypiechart class="chart" options="options" percent="getPercentageValue(c.count, category.count)"></div>
                                 <h2 class="text-center">{{c.name}} - <b>{{c.count}}</b></h2>
                             </a>

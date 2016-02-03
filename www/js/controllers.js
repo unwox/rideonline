@@ -197,7 +197,8 @@ angular.module('woocommerce-api.controllers', [])
             $rootScope.$broadcast('loading:show');
 
             ProductsData.getProductsAsync(
-                $scope.productsPage + 1, {
+                $scope.productsPage + 1, 
+				{
                     'filter[category]': $stateParams.category_name
                 }).then(
                 // successCallback
