@@ -272,7 +272,7 @@ angular.module('woocommerce-api.data', [])
 
     function formatProducts() {
         var line_items = [];
-        for (product of basket) {
+        for (product in basket) {
             // No variations support yet. 
             var order_json = {
                 'product_id': product.id,
@@ -280,7 +280,7 @@ angular.module('woocommerce-api.data', [])
             };
             var variations = {}
 
-            for (attr of product['attributes'])
+            for (attr in product['attributes'])
                 variations['pa_' + attr.name] = attr.options[attr.position];
             if (variations != {})
             order_json['variations'] = variations;
