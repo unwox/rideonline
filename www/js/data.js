@@ -272,7 +272,8 @@ angular.module('woocommerce-api.data', [])
 
     function formatProducts() {
         var line_items = [];
-        for (product in basket) {
+        for (i in basket) {
+			product = basket[i];
             // No variations support yet. 
             var order_json = {
                 'product_id': product.id,

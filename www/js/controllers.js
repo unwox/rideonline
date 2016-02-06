@@ -121,7 +121,8 @@ angular.module('woocommerce-api.controllers', [])
 
             // Create layered categories/sub-categories view
             var parents = [];
-            for (cat in cats) {
+            for (i in cats) {
+				cat = cats[i];
                 // Has no parent itself
                 if (cat.parent == 0) {
                     parents[cat.id] = cat;
@@ -138,7 +139,8 @@ angular.module('woocommerce-api.controllers', [])
             }
 
             // Add children
-            for (cat in cats) {
+            for (i in cats) {
+				cat = cats[i];
                 if (cat.parent != 0) {
                     parents[cat.parent].children.push(cat);
 
